@@ -1,4 +1,4 @@
-package com.mnizarzr.fitnessapp.fitnessapp;
+package com.mnizar.app.fitness;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.mnizarzr.fitnessapp.fitnessapp", appContext.getPackageName());
+        assertEquals("com.mnizar.app.fitness", appContext.getPackageName());
     }
 }

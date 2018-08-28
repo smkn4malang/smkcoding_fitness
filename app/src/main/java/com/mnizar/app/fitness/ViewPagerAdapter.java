@@ -1,4 +1,4 @@
-package com.mnizarzr.fitnessapp.fitnessapp;
+package com.mnizar.app.fitness;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

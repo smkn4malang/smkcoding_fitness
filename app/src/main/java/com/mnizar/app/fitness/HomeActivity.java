@@ -1,7 +1,7 @@
-package com.mnizarzr.fitnessapp.fitnessapp;
+package com.mnizar.app.fitness;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -22,10 +22,5 @@ public class HomeActivity extends AppCompatActivity {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         pager.setAdapter(viewPagerAdapter);
         tab.setupWithViewPager(pager);
-
-
     }
-
-
-
 }

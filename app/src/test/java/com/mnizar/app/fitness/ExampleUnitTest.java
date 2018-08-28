@@ -1,4 +1,4 @@
-package com.mnizarzr.fitnessapp.fitnessapp;
+package com.mnizar.app.fitness;
 
 import org.junit.Test;
 
