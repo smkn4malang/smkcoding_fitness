@@ -1,6 +1,7 @@
 package com.mnizar.app.fitness;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
 
@@ -47,5 +49,11 @@ public class ExerciseFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+    }
+
+    @OnClick({R.id.img1,R.id.img2,R.id.img3,R.id.img4})
+    public void onImageClicked(){
+        Intent intent = new Intent(getActivity(), DifficultyActivity.class);
+        startActivity(intent);
     }
 }
