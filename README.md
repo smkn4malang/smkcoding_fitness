@@ -2,19 +2,19 @@
 
 Sementara
 
-[!Logo](screenshots/main.png)
+![Logo](screenshots/main.png)
 
 Sementara
 
-[!Logo](screenshots/bmi.png)
+![Logo](screenshots/bmi.png)
 
 Sementara
 
-[!Logo](screenshots/difficult.png)
+![Logo](screenshots/difficult.png)
 
 Sementara
 
-[!Logo](screenshots/settings.png)
+![Logo](screenshots/settings.png)
 
 Thanks to:
 
