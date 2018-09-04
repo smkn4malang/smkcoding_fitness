@@ -4,19 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsActivity"
     android:orientation="vertical"
-    android:padding="10dp">
+    tools:context=".SettingsActivity">
 
-    <Switch
-        android:id="@+id/switch1"
+    <Button
+        android:id="@+id/btnPengingat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Notifikasi"
-        android:textSize="20sp"
-        android:clickable="true"
-        android:focusable="true" />
+        android:background="?attr/selectableItemBackground"
+        android:padding="10dp"
+        android:text="Pengingat"
+        android:textAlignment="viewStart"
+        android:textSize="15sp" />
 
-
+    <Button
+        android:id="@+id/btnAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="10dp"
+        android:text="About Us"
+        android:textAlignment="viewStart"
+        android:textSize="15sp" />
 
 </LinearLayout>
