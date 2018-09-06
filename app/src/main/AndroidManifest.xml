@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Splash">
@@ -19,25 +18,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".HomeActivity" />
-
         <activity
             android:name=".SettingsActivity"
             android:label="Settings" />
-
         <activity
             android:name=".DifficultyActivity"
             android:label="Difficulty" />
-
         <activity android:name=".ReminderActivity" />
-
         <activity
             android:name=".AboutActivity"
             android:label="About Us" />
-
-        <activity android:name=".InstructionActivity"/>
-
+        <activity android:name=".InstructionActivity" />
+        <activity android:name=".WeekActivity" />
+        <activity android:name=".OnExercisingActivity" />
+        <activity android:name=".FinishActivity"></activity>
     </application>
 
 </manifest>
