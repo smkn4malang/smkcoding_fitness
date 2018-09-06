@@ -9,25 +9,21 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class DifficultyActivity extends AppCompatActivity {
+public class WeekActivity extends AppCompatActivity {
 
-    @BindView(R.id.btnEasy)
-    Button btnEasy;
-    @BindView(R.id.btnMed)
-    Button btnMed;
-    @BindView(R.id.btnHard)
-    Button btnHard;
+    @BindView(R.id.btnGo)
+    Button btnGo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_difficulty);
+        setContentView(R.layout.activity_week);
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btnEasy,R.id.btnMed,R.id.btnHard})
+    @OnClick(R.id.btnGo)
     public void onBtnClicked(){
-        Intent intent = new Intent(this, WeekActivity.class);
+        Intent intent = new Intent(this, OnExercisingActivity.class);
         startActivity(intent);
     }
 
