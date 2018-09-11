@@ -60,7 +60,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_weight="1"
-                    android:src="@color/colorAccent" />
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    android:src="@drawable/exercise_arms" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Arms Exercises"
+                    android:textColor="#FFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -74,7 +87,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_weight="1"
-                    android:src="@color/colorAccent" />
+                    android:scaleX="1.3"
+                    android:scaleY="1.3"
+                    android:src="@drawable/exercise_legs" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Legs Exercises"
+                    android:textColor="#FFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -88,7 +114,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_weight="1"
-                    android:src="@color/colorAccent" />
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    android:src="@drawable/exercise_chest"
+                    android:translationX="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Chest Exercises"
+                    android:textColor="#FFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
             </android.support.v7.widget.CardView>
         </LinearLayout>
 

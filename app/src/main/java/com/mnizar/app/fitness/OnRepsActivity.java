@@ -2,28 +2,31 @@ package com.mnizar.app.fitness;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Button;
+import android.widget.ImageView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class FinishActivity extends AppCompatActivity {
+public class OnRepsActivity extends AppCompatActivity {
 
-    @BindView(R.id.finish)
-    Button btnFinish;
+    @BindView(R.id.instructionImage)
+    ImageView instructionImage;
+    @BindView(R.id.floatingActionButton)
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_finish);
+        setContentView(R.layout.activity_on_reps);
         ButterKnife.bind(this);
     }
 
-    @OnClick(R.id.finish)
+    @OnClick(R.id.floatingActionButton)
     public void onBtnClicked(){
-        Intent intent = new Intent(this, WeekActivity.class);
+        Intent intent = new Intent(this, FinishActivity.class);
         startActivity(intent);
     }
 
