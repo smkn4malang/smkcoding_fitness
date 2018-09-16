@@ -16,8 +16,8 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
-        android:layout_width="145dp"
-        android:layout_height="177dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="25dp"
@@ -30,35 +30,38 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
-        android:padding="20dp">
+        android:layout_margin="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="15dp">
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="20dp">
 
                 <TableRow>
 
                     <TextView
+                        android:id="@+id/jenis"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Push up"
+                        android:text="Push-Up"
                         android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="20x"
                         android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
 
                 </TableRow>
 
@@ -70,9 +73,11 @@
                 android:scrollbars="none">
 
                 <TextView
+                    android:id="@+id/instruksi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/about" />
+                    android:text=""
+                    android:textColor="@color/black"/>
 
             </ScrollView>
 
