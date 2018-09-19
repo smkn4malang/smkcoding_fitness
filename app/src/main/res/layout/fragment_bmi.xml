@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:text="@string/bmi"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="30sp" />
 
     <LinearLayout
@@ -23,16 +24,19 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Berat badan"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/berat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:maxLength="3"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <TextView
@@ -40,6 +44,7 @@
             android:layout_height="wrap_content"
             android:text="KG"
             android:textAlignment="textEnd"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
     </LinearLayout>
@@ -54,32 +59,51 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Tinggi badan"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/tinggi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:maxLength="3"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <TextView
             android:layout_width="35dp"
             android:layout_height="wrap_content"
-            android:text="CM"
+            android:text="M"
             android:textAlignment="textEnd"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
     </LinearLayout>
 
     <Button
+        android:id="@+id/calculator"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
         android:text="OK" />
 
+    <TextView
+        android:id="@+id/bmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/bmiResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
 
 </LinearLayout>

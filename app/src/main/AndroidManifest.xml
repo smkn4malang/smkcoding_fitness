@@ -33,7 +33,8 @@
         <activity android:name=".WeekActivity" />
         <activity android:name=".OnExercisingActivity" />
         <activity android:name=".FinishActivity" />
-        <activity android:name=".OnRepsActivity"></activity>
+        <activity android:name=".OnRepsActivity" />
+        <activity android:name=".instruksiActivity"></activity>
     </application>
 
 </manifest>

@@ -9,4 +9,14 @@
         yang digunakan untuk nilai semester dan persyaratan berangkat prakerin.
     </string>
 
+    <string name="very_severely_underweight">Very Severely Underweight</string>
+    <string name="severely_underweight">Severely Underweight</string>
+    <string name="underweight">Underweight</string>
+    <string name="normal">Healthy Weigh</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese_class_i">Moderately Obese</string>
+    <string name="obese_class_ii">Severely Obese</string>
+    <string name="obese_class_iii">Very Severely Obese</string>
+
+
 </resources>
