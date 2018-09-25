@@ -18,16 +18,32 @@
             android:layout_margin="10dp"
             android:orientation="vertical">
 
-            <Switch
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:text="20:00"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pilih Waktu"
+                    android:textSize="30sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                <Switch
+                    android:id="@+id/timeSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -41,6 +57,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/repeat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Ulangi"
@@ -48,6 +65,7 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/day"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Sen, Sel, Rab"
@@ -55,8 +73,9 @@
                 </LinearLayout>
 
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:background="?attr/selectableItemBackground"
                     android:src="@drawable/ic_delete" />
