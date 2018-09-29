@@ -6,22 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".OnRepsActivity">
 
-    <ImageView
-        android:id="@+id/instructionImage"
-        android:layout_width="230dp"
-        android:layout_height="150dp"
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="@color/colorAccent" />
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/instructionImage"
+            android:layout_width="230dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center" />
+
+    </ViewFlipper>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="25dp"
+        android:layout_alignParentBottom="true"
         android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
         android:clickable="true"
         android:focusable="true"
         app:srcCompat="@drawable/ic_arrow_forward" />
@@ -61,7 +68,7 @@
                         android:text="20x"
                         android:textColor="@color/black"
                         android:textSize="20sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                 </TableRow>
 
@@ -77,7 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black" />
 
             </ScrollView>
 

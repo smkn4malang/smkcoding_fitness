@@ -1,11 +1,14 @@
 package com.mnizar.app.fitness;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,6 +24,10 @@ public class OnRepsActivity extends AppCompatActivity {
     TextView jeniss;
     @BindView(R.id.instruksi)
     TextView instruksi;
+    @BindView(R.id.view_flipper)
+    ViewFlipper mViewFlipper;
+
+    private Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,17 +35,17 @@ public class OnRepsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_on_reps);
         ButterKnife.bind(this);
 
-        getDb();
+        getImage();
+
+        mViewFlipper.setAutoStart(true);
+        mViewFlipper.setFlipInterval(1000);
+        mViewFlipper.startFlipping();
     }
 
-    public void getDb(){
+    public void getImage() {
         DatabaseAccess databaseAccess = DatabaseAccess.getInstance(getApplicationContext());
         databaseAccess.open();
 
-        String jenis = jeniss.getText().toString();
-        String instruction = databaseAccess.getInstruction(jenis);
-
-        instruksi.setText(instruction);
 
         databaseAccess.close();
     }
@@ -47,6 +54,7 @@ public class OnRepsActivity extends AppCompatActivity {
     public void onBtnClicked() {
         Intent intent = new Intent(this, FinishActivity.class);
         startActivity(intent);
+        finish();
     }
 
 }

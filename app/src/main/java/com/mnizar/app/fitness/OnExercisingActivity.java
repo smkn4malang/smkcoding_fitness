@@ -28,6 +28,7 @@ public class OnExercisingActivity extends AppCompatActivity {
     public void onBtnClicked(){
         Intent intent = new Intent(this, OnRepsActivity.class);
         startActivity(intent);
+        finish();
     }
 
 }
