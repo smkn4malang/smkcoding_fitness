@@ -1,6 +1,7 @@
 package com.mnizar.app.fitness;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -53,39 +55,35 @@ public class BmiFragment extends Fragment {
 
     @OnClick(R.id.calculator)
     public void calculateBMI(View v) {
-        String heightStr = berat.getText().toString();
-        String weightStr = tinggi.getText().toString();
 
-        if (heightStr != null && !"".equals(heightStr)
-                && weightStr != null  &&  !"".equals(weightStr)) {
-            float heightValue = Float.parseFloat(heightStr) / 100;
-            float weightValue = Float.parseFloat(weightStr);
+        if (berat.getText().toString().length() > 0 && tinggi.getText().toString().length() > 0) {
+            float heightValue = Float.valueOf(tinggi.getText().toString()) / 100;
+            float weightValue = Float.valueOf(berat.getText().toString());
 
             float bmi = weightValue / (heightValue * heightValue);
 
             displayBMI(bmi);
+        }
+        else {
+            Toast.makeText(getActivity(), "Anda Harus Memasukkan Berat Badan dan Tinggi Badan", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void displayBMI(float bmi) {
         String bmiLabel = "";
 
-        if (Float.compare(bmi, 15f) <= 0) {
-            bmiLabel = getString(R.string.very_severely_underweight);
-        } else if (Float.compare(bmi, 15f) > 0 && Float.compare(bmi, 16f) <= 0) {
-            bmiLabel = getString(R.string.severely_underweight);
-        } else if (Float.compare(bmi, 16f) > 0 && Float.compare(bmi, 18.5f) <= 0) {
-            bmiLabel = getString(R.string.underweight);
+        if (Float.compare(bmi, 16f) > 0 && Float.compare(bmi, 18.5f) <= 0) {
+            bmiLabel = getString(R.string.bbkurang);
         } else if (Float.compare(bmi, 18.5f) > 0 && Float.compare(bmi, 25f) <= 0) {
-            bmiLabel = getString(R.string.normal);
+            bmiLabel = getString(R.string.bbideal);
         } else if (Float.compare(bmi, 25f) > 0 && Float.compare(bmi, 30f) <= 0) {
-            bmiLabel = getString(R.string.overweight);
+            bmiLabel = getString(R.string.bblebih);
         } else if (Float.compare(bmi, 30f) > 0 && Float.compare(bmi, 35f) <= 0) {
-            bmiLabel = getString(R.string.obese_class_i);
+            bmiLabel = getString(R.string.gemuk);
         } else if (Float.compare(bmi, 35f) > 0 && Float.compare(bmi, 40f) <= 0) {
-            bmiLabel = getString(R.string.obese_class_ii);
+            bmiLabel = getString(R.string.sangatgemuk);
         } else {
-            bmiLabel = getString(R.string.obese_class_iii);
+            bmiLabel = getString(R.string.sangatgemuk);
         }
         bmiLabel = bmi + "\n\n" + bmiLabel;
         bmiResult.setText(bmiLabel);
