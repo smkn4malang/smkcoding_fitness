@@ -23,7 +23,7 @@ public class FinishActivity extends AppCompatActivity {
 
     @OnClick(R.id.finish)
     public void onBtnClicked(){
-        Intent intent = new Intent(this, WeekActivity.class);
+        Intent intent = new Intent(this, DifficultyActivity.class);
         startActivity(intent);
     }
 

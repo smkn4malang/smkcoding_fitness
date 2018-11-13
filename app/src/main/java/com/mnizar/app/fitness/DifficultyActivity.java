@@ -27,7 +27,7 @@ public class DifficultyActivity extends AppCompatActivity {
 
     @OnClick({R.id.btnEasy,R.id.btnMed,R.id.btnHard})
     public void onBtnClicked(){
-        Intent intent = new Intent(this, WeekActivity.class);
+        Intent intent = new Intent(this, OnExercisingActivity.class);
         startActivity(intent);
     }
 

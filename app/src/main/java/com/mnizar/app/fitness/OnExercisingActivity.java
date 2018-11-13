@@ -12,8 +12,6 @@ import butterknife.OnClick;
 
 public class OnExercisingActivity extends AppCompatActivity {
 
-    @BindView(R.id.instructionImage)
-    ImageView instructionImage;
     @BindView(R.id.floatingActionButton)
     FloatingActionButton fab;
 
